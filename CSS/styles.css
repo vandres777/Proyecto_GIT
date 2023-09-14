@@ -1,0 +1,13 @@
+/* Estilo para el panel izquierdo */
+.side-panel {
+    background-color: #333;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Estilo para el contenido en el centro */
+.content {
+    padding: 20px;
+}
+

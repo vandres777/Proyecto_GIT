@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <link rel="stylesheet" href="./CSS/styles.css" />
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <!-- Example Code -->
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler ms-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+
+        <img class="XNo5Ab" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4AcWVNXAcQRBFx8zMjpcSM4di6dDMGDuPHJmZ2c7MiRlDM2SmyMyMYl790VVXTbVqtDWHXfWP5/6bv9O9ItlqiHuz/oWdJ/+hxrg3XWSzYL4C8kmNCS3JuHFdzOtSH/dWQmSeXQgAjKyPeb4EyCXEgqxD1Ma8VRUR94YCMTtrEDBfAflSOPUPFIh5P8vsn99L7cxB1MTcFVCrOelv2HkE8970G5j3gdakHaI6mjBPKGGu6IBgBbAndElSgiBzyJciCDWJqqh7hq8pDzu30nIm8OfLyZzEk/hWZlfguS/rjnkpH0yYr4B8KTLXJfEz5LzGcycYd1cgZhGE8eWohDkEc1IwBNQBGoQWvUogRi3KzRkAxAAUiC+ldrPSqv6vkP1OnRN1Uff4/4jzIBCiIuJFIWmuKDAJAFg+GeI1zYmHMB8slALApnYgQuJzif1NAhBEUBIkFeBrqd1EHQKAhYKVblj9CdkfsNh5SQAmSXwuaZMAaakOgENgdjwX5RFnGpmbQHAAatEfZfYXPA9RzsMeyNcczMkCJSFKTCE4gNodcsfojMu/Q85TaU5iEIW0niCKTSForW5iQmTOIfJprRGECoCon9I6vH5VwyemHqKA+xongcj/AKKrkkA/fFYbmAQ3TwFiC18D86OaeweJYg+uoIOJqXdbsPpZZj/Tjm3NzlNNYh3UpwrxQzt1ExMy27lJEmhFeR70EzPmFqRgnVqLQqmbm7coCbGnuQwmpmbnWUlCs/NsJaHO9qxAjPsTci//DbnnADBaJFktk63VVxGkRzAAAAAASUVORK5CYII=" style="height:28px;width:28px" alt="" data-atf="1" data-frt="0">
+
+
+        <div
+          class="offcanvas offcanvas-start text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Dark offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" onclick="mostrarContenido('contenido-default')">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="opcion1" onclick="mostrarContenido('contenido-opcion1')">1 ¿Qué es un sistema de control de versiones?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="opcion2" onclick="mostrarContenido('contenido-opcion2')">2 ¿Qué es Git?</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion3" onclick="mostrarContenido('contenido-opcion3')">3 Configuración de Git</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" id="opcion4" onclick="mostrarContenido('contenido-opcion4')">4 Creación de repositorios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion5" onclick="mostrarContenido('contenido-opcion5')">5 Copia de repositorios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion6" onclick="mostrarContenido('contenido-opcion6')">6 Añadir cambios a un repositorio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion7" onclick="mostrarContenido('contenido-opcion7')">7 Añadir cambios a la zona de intercambio temporal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion8" onclick="mostrarContenido('contenido-opcion8')">8 Añadir cambios al repositorio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion9" onclick="mostrarContenido('contenido-opcion9')">9 Registro de cambios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion10" onclick="mostrarContenido('contenido-opcion10')">10 Referenciar un commit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion11" onclick="mostrarContenido('contenido-opcion11')">11 Estado e historia de un repositorio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion12" onclick="mostrarContenido('contenido-opcion12')">12 Mostrar el historial de versiones de un repositorio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion13" onclick="mostrarContenido('contenido-opcion13')">13 Mostrar los datos de un commit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion14" onclick="mostrarContenido('contenido-opcion14')">14 Mostrar el historial de cambios de un fichero</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion15" onclick="mostrarContenido('contenido-opcion15')">15 Mostrar las diferencias entre versiones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion16" onclick="mostrarContenido('contenido-opcion16')">16 Deshacer cambios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion17" onclick="mostrarContenido('contenido-opcion17')">17 Eliminar cambios de la zona de intercambio temporal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion18" onclick="mostrarContenido('contenido-opcion18')">18 Eliminar cambios de un commit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion19" onclick="mostrarContenido('contenido-opcion19')">19 Ramas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion20" onclick="mostrarContenido('contenido-opcion20')">20 Creación de ramas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion21" onclick="mostrarContenido('contenido-opcion21')">21 Desarrollo en ramas diferentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion22" onclick="mostrarContenido('contenido-opcion22')">22 Listado de ramas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion23" onclick="mostrarContenido('contenido-opcion23')">23 Cambio de ramas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion24" onclick="mostrarContenido('contenido-opcion24')">24 Fusión de ramas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion25" onclick="mostrarContenido('contenido-opcion25')">25 Resolución de conflictos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion26" onclick="mostrarContenido('contenido-opcion26')">26 Reorganización de ramas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion27" onclick="mostrarContenido('contenido-opcion27')">27 Eliminación de ramas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion28" onclick="mostrarContenido('contenido-opcion28')">28 Repositorios remotos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion29" onclick="mostrarContenido('contenido-opcion29')">29 ¿Qué es GitHub?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion30" onclick="mostrarContenido('contenido-opcion30')">30 Añadir un repositorio remoto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion31" onclick="mostrarContenido('contenido-opcion31')">31 Lista de repositorios remotos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion32" onclick="mostrarContenido('contenido-opcion32')">32 Descargar cambios desde un repositorio remoto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion33" onclick="mostrarContenido('contenido-opcion33')">33 Subir cambios a un repositorio remoto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion34" onclick="mostrarContenido('contenido-opcion34')">34 Colaboración en repositorios remotos de GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="opcion35" onclick="mostrarContenido('contenido-opcion35')">35 Referencias</a>
+            </li>
+
+          
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido en el centro -->
+    <div class="col-md-90 content"><!-- aqui se centra el contenido de la pagina central -->
+      <div id="contenido-default">
+        <h2>Bienvenido</h2><br>
+        <p>
+          Selecciona una opción en el panel izquierdo para ver su contenido.
+        </p>
+      </div>
+      <div id="contenido-opcion1" style="display: none; text-align: center;">
+        <h2>¿Qué es un sistema de control de versiones?</h2><br>
+        <p>Un Sistema de Control de Versiones (SCV) es una
+          aplicación que permite gestionar los cambios que se
+          realizan sobre los elementos de un proyecto o
+          repositorio, guardando así versiones del mismo en todas
+          sus fases de desarrollo.</p>
+          <li>Registra cada cambio en el proyecto o repositorio, quién y cuándo lo hace, en una base de datos.</li>
+          <li>Permite volver a estados previos del desarrollo.</li>
+          <li>Permite gestionar diferentes versiones del proyecto (ramas) para trabajar en paralelo y luego fundirlas.</li>
+          <li>Permite colaborar entre diferentes usuarios en un mismo repositorio,facilitando la resolución de con􀃓ictos.</li>
+          <li>Se utiliza principalmente en proyectos de desarrollo de software, perosirve para cualquier otro tipo de proyecto</li>
+      </div>
+      <div id="contenido-opcion2" style="display: none; text-align: center;">
+        <h2>¿Qué es Git?</h2><br><br>
+        
+        <img src="./Imagenes/git-blog-header.jpg" style="max-width: 800px; height: 372px; margin: 0px; width: 619px;" /><br><br>
+
+        <p>Git es un sistema de control de versiones de código abierto ideado por
+Linus Torvalds (el padre del sistema operativo Linux) y actualmente es el
+sistema de control de versiones más extendido.
+A diferencia de otros SCV Git tiene una arquitectura distribuida, lo que
+signi􀃒ca que en lugar de guardar todos los cambios de un proyecto en un
+único sitio, cada usuario contiene una copia del repositorio con el historial
+de cambios completo del proyecto. Esto aumenta signi􀃒cativamente su
+rendimiento.</p>
+
+      </div>
+      <div id="contenido-opcion3" style="display: none; text-align: center;">
+        <h2>Configuración de Git</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion4" style="display: none; text-align: center;">
+        <h2>Creación de repositorios</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion5" style="display: none; text-align: center;">
+        <h2>Copia de repositorios</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion6" style="display: none; text-align: center;">
+        <h2>Añadir cambios a un repositorio</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion7" style="display: none; text-align: center;">
+        <h2>Añadir cambios a la zona de intercambio temporal</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion8" style="display: none; text-align: center;">
+        <h2>Añadir cambios al repositorio</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion9" style="display: none; text-align: center;">
+        <h2>Registro de cambios</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion10" style="display: none; text-align: center;">
+        <h2>Referenciar un commit</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion11" style="display: none; text-align: center;">
+        <h2>Estado e historia de un repositorio</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion12" style="display: none; text-align: center;">
+        <h2>Mostrar el historial de versiones de un repositorio</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion13" style="display: none; text-align: center;">
+        <h2>Mostrar los datos de un commit</h2><br><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion14" style="display: none; text-align: center;">
+        <h2>Mostrar el historial de cambios de un fichero</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion15" style="display: none; text-align: center;">
+        <h2>Mostrar las diferencias entre versiones</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion16" style="display: none; text-align: center;">
+        <h2>Deshacer cambios</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion17" style="display: none; text-align: center;">
+        <h2>Eliminar cambios de la zona de intercambio temporal</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+    
+      <div id="contenido-opcion18" style="display: none; text-align: center;">
+        <h2>Eliminar cambios de un commit</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion19" style="display: none; text-align: center;">
+        <h2>Ramas</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion20" style="display: none; text-align: center;">
+        <h2>Creación de ramas</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion21" style="display: none; text-align: center;">
+        <h2>Desarrollo en ramas diferentes</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion22" style="display: none; text-align: center;">
+        <h2>Listado de ramas</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion23" style="display: none; text-align: center;">
+        <h2>Cambio de ramas</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion24" style="display: none; text-align: center;">
+        <h2>Fusión de ramas</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion25" style="display: none; text-align: center;">
+        <h2>Resolución de conflictos</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion26" style="display: none; text-align: center;">
+        <h2>Reorganización de ramas</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion27" style="display: none; text-align: center;">
+        <h2>Eliminación de ramas</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion28" style="display: none; text-align: center;">
+        <h2>Repositorios remotos</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion29" style="display: none; text-align: center;">
+        <h2>¿Qué es GitHub?</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion30" style="display: none; text-align: center;">
+        <h2>Añadir un repositorio remoto</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion31" style="display: none; text-align: center;">
+        <h2>Lista de repositorios remotos</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion32" style="display: none; text-align: center;">
+        <h2>Descargar cambios desde un repositorio remoto</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion33" style="display: none; text-align: center;">
+        <h2>Subir cambios a un repositorio remoto</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion34" style="display: none; text-align: center;">
+        <h2>Colaboración en repositorios remotos de GitHub</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+      </div>
+      <div id="contenido-opcion35" style="display: none; text-align: center;">
+        <h2>Referencias</h2><br>
+        <p>Este es el contenido de la Opción 1.</p>
+  </div>
+
+<!-- JavaScript en archivo externo -->
+<script src="./JS/script.js"></script>
+  </body>
+</html>
