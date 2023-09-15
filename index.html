@@ -367,35 +367,127 @@ rendimiento.</p>
       </div>
       <div id="contenido-opcion28" style="display: none; text-align: center;">
         <h2>Repositorios remotos</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        p>Para poder colaborar en cualquier proyecto Git, necesitas saber cómo gestionar 
+             repositorios remotos. Los repositorios remotos son versiones de tu proyecto 
+             que están hospedadas en Internet o en cualquier otra red. Puedes tener varios 
+             de ellos, y en cada uno tendrás generalmente permisos de solo lectura o de lectura 
+             y escritura. Colaborar con otras personas implica gestionar estos repositorios 
+             remotos enviando y trayendo datos de ellos cada vez que necesites compartir tu 
+             trabajo. Gestionar repositorios remotos incluye saber cómo añadir un repositorio 
+              remoto, eliminar los remotos que ya no son válidos, gestionar varias ramas remotas, 
+             definir si deben rastrearse o no y más. En esta sección, trataremos algunas de 
+             estas habilidades de gestión de remotos.</p>
+        <p>Ver Tus Remotos para ver los controles remotos que tienes configurados, debes 
+             ejecutar el comando git remote. Mostrará los nombres de cada uno de los remotos 
+             que tienes especificados. Si has clonado tu repositorio, deberías ver al menos 
+             origin (origen, en inglés) - este es el nombre que por defecto Git le da al servidor 
+             del que has clonado:</p>
+        <p>$ git clone https://github.com/schacon/ticgit
+             Cloning into 'ticgit'...
+             remote: Reusing existing pack: 1857, done.
+             remote: Total 1857 (delta 0), reused 0 (delta 0)
+             Receiving objects: 100% (1857/1857), 374.35 KiB | 268.00 KiB/s, done.
+             Resolving deltas: 100% (772/772), done.
+             Checking connectivity... done.
+             $ cd ticgit
+             $ git remote
+             origin</p>
       </div>
       <div id="contenido-opcion29" style="display: none; text-align: center;">
-        <h2>¿Qué es GitHub?</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+         <h2>Github que es</h2><br>
+            <p>GitHub es el proveedor de alojamiento en la nube para repositorios
+               gestionados con git más usado y el que actualmente tiene alojados más
+               proyectos de desarrollo de software de código abierto en el mundo.
+               La principal ventaja de GitHub es que permite albergar un número ilimitado
+               de repositorios tanto públicos como privados, y que además ofrece
+               servicios de registro de errores, solicitud de nuevas funcionalidades, gestión
+               de tareas, wikis o publicación de páginas web, para cada proyecto, incluso
+               con el plan básico que es gratuito.</p>
       </div>
       <div id="contenido-opcion30" style="display: none; text-align: center;">
-        <h2>Añadir un repositorio remoto</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+         <h2>Añadir Repositorios remotos</h2><br>
+        <p>En secciones anteriores hemos mencionado y dado alguna demostración de cómo agregar 
+          repositorios remotos. Ahora veremos claramente cómo hacerlo. Para agregar un control 
+          remoto nuevo y asociarlo a un nombre que puedas referenciar fácilmente, ejecuta git 
+          remote add [nombre] [url]:</p>
+        <p>$ git remote
+            origin
+            $ git remote add pb https://github.com/paulboone/ticgit
+            $ git remote -v
+            origin	https://github.com/schacon/ticgit (fetch)
+            origin	https://github.com/schacon/ticgit (push)
+            pb	https://github.com/paulboone/ticgit (fetch)
+            pb	https://github.com/paulboone/ticgit (push)</p>
       </div>
       <div id="contenido-opcion31" style="display: none; text-align: center;">
         <h2>Lista de repositorios remotos</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p>git-remote - Administrar conjunto de repositorios rastreados</p>
+        <p>git remoto [-v | --verbose]
+           git remoto agregar [-t <rama>] [-m <maestro>] [-f] [--[no-]etiquetas] [--mirror=(fetch|push)] <nombre> <URL >
+           git remoto renombrar [--[no-]progreso] <antiguo> <nuevo>
+           git remoto eliminar <nombre>
+           git remoto set-head <nombre> (-a | --auto | -d | --delete | <rama >)
+           git remoto set-branches [--add] <nombre> <rama>…
+          ​ git remoto get-url [--push] [--all] <nombre>
+           git remoto set-url [--push] <nombre > <nuevaurl> [<antigua URL>]
+           git remoto set-url --add [--push] <nombre> <nueva url>
+           git remoto set-url --delete [--push] <nombre>
+          <URL> git remoto [-v | --detallado] mostrar[-n] <nombre>…
+          ​ git remoto podar [-n | --dry-run] <nombre>…
+          ​ git remoto [-v | --verbose] actualizar [-p | --prune] [(<grupo> | <remoto>)…​]</p>
+        <p>El comando git remote te permite crear, ver y eliminar conexiones con otros repositorios. 
+          Las conexiones remotas se asemejan más a marcadores que a enlaces directos con otros repositorios.</p>
       </div>
       <div id="contenido-opcion32" style="display: none; text-align: center;">
         <h2>Descargar cambios desde un repositorio remoto</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p>No son muy numerosos los comandos de Git que acceden a la red, casi todos los comandos operan 
+          sobre la base de datos local. Cuando estas listo para compartir tu trabajo u obtener cambios de otros 
+          lugares, hay un puñado de comandos que tienen que ver con los repositorios remotos.</p>
+        <p>Descargar cambios desdegit fetchy`git pull. A continuación,
+              git fetch:
+              git fetch se utiliza para obtener o se comunica con un repositorio remoto y obtiene toda la 
+              información que se encuentra en ese repositorio que no está en el tuyo actual y la almacena 
+              en tu base de datos local.</p>
+        <p>En estegit pull.
+            git pull: git pull se utiliza para obtener los cambios más `git fetch` y `git fusionar `git merge`.</p>
+        <p>En resumen, git fetchte permite descargar los cambios del repositorio.git pulldescarga los cambios y 
+            los fusiona automaticamente en tu rama local. La elección entre estos comandos depende de si deseas 
+            revisar los cambios antes de fusionarlos o si prefieres una fusión automática.</p>
       </div>
       <div id="contenido-opcion33" style="display: none; text-align: center;">
         <h2>Subir cambios a un repositorio remoto</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p>El comando git push sube el contenido de un repositorio local a un repositorio central. Dado que 
+            este comando sobrescribe los cambios, solo debe ejecutarse con una rama vacía como objetivo.</p>
+        <p>El comando git push toma dos argumentos:
+            Un nombre remoto, por ejemplo, origin <br>
+            Un nombre de rama, por ejemplo, main</p>
       </div>
       <div id="contenido-opcion34" style="display: none; text-align: center;">
         <h2>Colaboración en repositorios remotos de GitHub</h2><br>
-        <p>Martin.</p>
+        <p>Existen dos formas de colaborar en un repositorio alojado en GitHub: Ser colaborador del repositorio. 
+          Recibir autorización de colaborador por parte de la persona propietaria del proyecto. Clonar el repositorio en local.</p>
+        <p>Ser colaborador del repositorio.
+            1. Recibir autorización de colaborador por parte de la persona
+            propietaria del proyecto.
+            2. Clonar el repositorio en local.
+            3. Hacer cambios en el repositorio local.
+            4. Subir los cambios al repositorio remoto. Primero hacer git pull
+            para integrar los cambios remotos en el repositorio local y luego git
+            push para subir los cambios del repositorio local al remoto.</p>
       </div>
       <div id="contenido-opcion35" style="display: none; text-align: center;">
         <h2>Referencias</h2><br>
-        <p>Juan Camilo.</p>
+        <p>Git.Sitio web de Git.
+          GitHub.Sitio web de GitHub.
+          Pro Git. Libro oficial de Git.
+          Ry's Git Tutorial.Tutorial de Git gratuito.
+          Gitcheats. Página de ayuda sobre los comandos de Git.
+          Trucos y consejos de Git. Resumen de los comandos más importantes y
+          consejos sobre el uso de Git.
+          Chuleta de comandos de Git. Resumen de los comandos de Git más
+          habituales.
+          Flujos de trabajo con Git. Esquema de los  
+          flujos de trabajos mas habituales con Git</p>
   </div>
 
 <!-- JavaScript en archivo externo -->
