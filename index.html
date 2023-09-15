@@ -318,15 +318,22 @@ rendimiento.</p>
     
       <div id="contenido-opcion18" style="display: none; text-align: center;">
         <h2>Eliminar cambios de un commit</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <li>git reset --hard <commit> elimina todos los cambios desde el commit <commit> y actualiza el HEAD este commit.
+          ¡Ojo! Usar con cuidado este comando pues los cambios posteriores al commit indicado se pierden por completo.
+          Suele usarse para eliminar todos los cambios en el directorio de trabajo desde el último commit mediante el comando git reset --hard HEAD.</li>
+        <li>git reset <commit> actualiza el HEAD al commit <commit>, es decir,elimina todos los commits posteriores a este commit, pero no elimina los cambios del directorio de trabajo.</li>
       </div>
       <div id="contenido-opcion19" style="display: none; text-align: center;">
         <h2>Ramas</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p>Inicialmente cualquier repositorio tiene una única rama llamada master donde se van sucediendo todos los commits de manera lineal.
+          Una de las característica más útiles de Git es que permite la creación de ramas para trabajar en distintas versiones de un proyecto a la vez.
+          Esto es muy útil si, por ejemplo, se quieren añadir nuevas funcionalidades al proyecto sin que inter􀃒eran con lo desarrollado hasta ahora.
+          Cuando se termina el desarrollo de las nuevas funcionalidades las ramas se pueden fusionar para incorporar lo cambios al proyecto principal.</p>
       </div>
       <div id="contenido-opcion20" style="display: none; text-align: center;">
         <h2>Creación de ramas</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p>git branch <rama> crea una nueva rama con el nombre <rama> en el repositorio a partir del último commit, es decir, donde apunte HEAD.
+          Al crear una rama a partir de un commit, el 􀃓ujo de commits se bifurca en dos de manera que se pueden desarrollar dos versiones del proyecto en paralelo.</p>
       </div>
       <div id="contenido-opcion21" style="display: none; text-align: center;">
         <h2>Desarrollo en ramas diferentes</h2><br>
@@ -334,11 +341,13 @@ rendimiento.</p>
       </div>
       <div id="contenido-opcion22" style="display: none; text-align: center;">
         <h2>Listado de ramas</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <li>git branch muestra las ramas activas de un repositorio indicando con * la rama activa en ese momento.</li>
+        <li>git log --graph --oneline muestra la historia del repositorio en forma de grafo (--graph) incluyendo todas las ramas (--all).</li>
       </div>
       <div id="contenido-opcion23" style="display: none; text-align: center;">
         <h2>Cambio de ramas</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <li>git checkout <rama> actualiza los 􀃒cheros del directorio de trabajo ala última versión del repositorio correspondiente a la rama <rama>, y la activa, es decir, HEAD pasa a apuntar al último commit de esta rama.</li>
+          <li>git checkout -b <rama> crea una nueva rama con el nombre <rama> y la activa, es decir, HEAD pasa a apuntar al último commit de esta rama. Este comando es equivalente aplicar los comandos git branch <rama> y después git checkout <rama>.</li>
       </div>
       <div id="contenido-opcion24" style="display: none; text-align: center;">
         <h2>Fusión de ramas</h2><br>
