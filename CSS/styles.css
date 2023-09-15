@@ -11,3 +11,12 @@
     padding: 20px;
 }
 
+.contenido{
+    display: none; 
+    text-align: center;
+
+}
+
+a{
+    cursor: pointer;
+}
