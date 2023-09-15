@@ -273,48 +273,101 @@ rendimiento.</p>
     
       <div id="contenido-opcion9" style="display: none; text-align: center;">
         <h2>Registro de cambios</h2><br><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p> Para guardar los cambios en un repositorio Git utiliza una estructura de tres
+        niveles: 
+        <li>Commit Contiene información sobre el autor, el momento y el mensaje
+        de los cambios.</li>
+        <li>Árbol (tree) Cada commit contiene además un árbol donde se registran
+        los nombres y rutas de los cheros en el repositorio cuando se hizo el
+        commit.</li>
+        <li>Blob (binary le object) Para cada uno de los cheros listados en el
+        árbol hay un blob, que contiene una instantánea comprimida del
+        contenido del chero cuando se hizo el commit.</li>
+        Si un chero del repositorio no ha cambiado en el commit, el árbol apunta
+        al blob del chero del último commit donde el chero cambió</p>
       </div>
     
       <div id="contenido-opcion10" style="display: none; text-align: center;">
         <h2>Referenciar un commit</h2><br><br>
-        <p>Este es el contenido de la Opción 1.</p>
-      </div>
-    
+        <p>Cada commit tiene asociado un código hash de 40 caracteres
+        hexadecimales que lo identica de manera única. Hay dos formas de
+        referirse a un commit:
+        <li>>Nombre absoluto: Se utiliza su código hash (basta indicar los 4 o 5
+        primeros dígitos).</li
+        <li>Nombre relativo: Se utiliza la palabra HEAD para referirse siempre al
+        último commit. Para referirse al penúltimo commit se utiliza HEAD~1, al
+        antepenúltimo HEAD~2, etc.</li></p>
+       </div>
+
+       <img src= "" /><br><br>
+      
       <div id="contenido-opcion11" style="display: none; text-align: center;">
         <h2>Estado e historia de un repositorio</h2><br><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p> Mostrar el estado de un repositorioMostrar el estado de un repositorio
+        <li>Git status: muestra el estado de los cambios en el repositorio desde la
+        última versión guardada. En particular, muestra los cheros con cambios
+        en el directorio de trabajo que no se han añadido a la zona de
+        intercambio temporal y los cheros en la zona de intercambio temporal
+        que no se han añadido al repositorio.</li></p>
       </div>
     
       <div id="contenido-opcion12" style="display: none; text-align: center;">
         <h2>Mostrar el historial de versiones de un repositorio</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p><li>Git log: Muestra el historial de commits de un repositorio ordenado
+        cronológicamente. Para cada commit muestra su código hash, el autor, la
+        fecha, la hora y el mensaje asociado.
+        Este comando es muy versátil y muestra la historia del repositorio en
+        distintos formatos dependiendo de los parámetros que se le den. Los
+        más comunes son:</li>
+        <li>--oneline muestra cada commit en una línea produciendo una
+        salida más compacta.</li>
+        <li>--graph muestra la historia en forma de grafo.</li></p>
       </div>
     
       <div id="contenido-opcion13" style="display: none; text-align: center;">
         <h2>Mostrar los datos de un commit</h2><br><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p><li>Git show: muestra el usuario, el día, la hora y el mensaje del último
+        commit, así como las diferencias con el anterior.</li>
+        <li>Git show <commit>: Muestra el usuario, el día, la hora y el mensaje del
+        commit indicado, así como las diferencias con el anterior.</li>
       </div>
     
       <div id="contenido-opcion14" style="display: none; text-align: center;">
         <h2>Mostrar el historial de cambios de un fichero</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p><li>Git annotate: Muestra el contenido de un chero anotando cada línea
+        con información del commit en el que se introdujo.
+        Cada línea de la salida contiene los 8 primeros dígitos del código hash del
+        commit correspondiente al cambio, el autor de los cambio, la fecha, el
+        número de línea del chero y el contenido de la línea</li></p>
       </div>
     
       <div id="contenido-opcion15" style="display: none; text-align: center;">
         <h2>Mostrar las diferencias entre versiones</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p><li>Git diff: Muestra las diferencias entre el directorio de trabajo y la zona
+        de intercambio temporal.</li>
+        <li>Git diff --cached Muestra las diferencias entre la zona de
+        intercambio temporal y el último commit.</li>
+        <li>Git diff HEAD: Muestra la diferencia entre el directorio de trabajo y el
+        último commit.</li></p>
       </div>
     
       <div id="contenido-opcion16" style="display: none; text-align: center;">
         <h2>Deshacer cambios</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
+        <p><li>Git checkout <commit> -- <file> actualiza el chero <file> a la
+        versión correspondiente al commit <commit>.
+        Suele utilizarse para eliminar los cambios en un chero que no han sido
+        guardados aún en la zona de intercambio temporal, mediante el comando
+        git checkout HEAD -- <file>.</li></p>
       </div>
     
       <div id="contenido-opcion17" style="display: none; text-align: center;">
         <h2>Eliminar cambios de la zona de intercambio temporal</h2><br>
-        <p>Este es el contenido de la Opción 1.</p>
-      </div>
+        <p><li>Git reset <fichero>: Elimina los cambios del chero <fichero> de
+        la zona de intercambio temporal, pero preserva los cambios en el
+        directorio de trabajo.
+        Para eliminar por completo los cambios de un chero que han sido
+        guardados en la zona de intercambio temporal hay que aplicar este
+        comando y después git checkout HEAD -- <fichero></li></p>
     
       <div id="contenido-opcion18" style="display: none; text-align: center;">
         <h2>Eliminar cambios de un commit</h2><br>
