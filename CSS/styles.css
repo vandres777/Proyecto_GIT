@@ -17,6 +17,7 @@
 
 }
 
-a{
+a:hover{
     cursor: pointer;
+
 }
