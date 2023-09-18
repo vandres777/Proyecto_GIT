@@ -5,6 +5,10 @@
     min-height: 100vh;
     padding: 20px;
 }
+.hUno{
+    font-weight: bold;
+    font-size: 50px;
+}
 
 /* Estilo para el contenido en el centro */
 .content {
